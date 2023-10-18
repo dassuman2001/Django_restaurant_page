@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Mono&display=swap');
+body{
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.nav li {
+    list-style-type: none;
+    padding: 20px 15px;
+}
+.nav li :hover{
+    text-decoration: underline;
+}
+
+.nav li a {
+    font-family: 'Big Shoulders Text', cursive;
+    color: #ffffff;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-decoration-line: none;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+}
+
+
+.section-intro {
+    height: 820px;
+    background-image: url('home.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    position: relative;
+    font-family: 'Pacifico', cursive;
+    font-size: calc(20px + 5vw);
+    font-weight: 700;
+    color: #fff6a9;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    user-select: none;
+    white-space: nowrap;
+    filter: blur(0.007em);
+    animation: shake 2.5s linear infinite; 
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 1px #ff0000;
+}
+
+h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+            clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+}
+
+h1::before,
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+@keyframes shake {
+    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+        filter: blur(0.018em);
+        transform: translateY(0.018em) rotate(0deg);
+    }
+
+    10%, 30%, 40%, 50%, 70%, 80%, 90% {
+        filter: blur(0.01em);
+        transform: translateY(-0.018em) rotate(0deg);
+    }
+
+    20%, 60% {
+        filter: blur(0.03em);
+        transform: translate(-0.018em, 0.018em) rotate(0deg);
+    }
+
+    45%, 85% {
+        filter: blur(0.03em);
+        transform: translate(0.018em, -0.018em) rotate(0deg);
+    }
+
+    100% {
+        filter: blur(0.007em);
+        transform: translate(0) rotate(-0.5deg);
+    }
+}
+
+
+.section-intro header {
+    display: flex;
+    flex: 4;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-to-book-div {
+    flex: 1;
+}
+
+.link-to-text {
+    color: #ffffff;
+    display: block;
+    border: 4px solid #ffffff;
+    padding: 10px 10px;
+    font-size: 20px;
+    text-decoration-line: none;
+    font-family: Arial, Helvetica, sans-serif; 
+
+}
+
+a.link-to-text:hover {
+    background-color: #ffffff;
+    color: #95999e;
+    text-decoration: none;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3c0;
+    padding: 90px 30px;
+}
+
+.about-section p,
+.about-section h3 {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    font-family: 'Big Shoulders Text', cursive;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.slide {
+    height: 820px;
+    background-image: url('slide1.jpg');
+    background-size: 100% 100%;
+    animation: slideImg 20s linear infinite ;
+}
+@keyframes slideImg {
+    0%{
+        background-image: url('slide1.jpg');
+    }
+    35%{
+        background-image: url('slide2.jpg');
+    }
+    70%{
+        background-image: url('slide3.jpg');
+        background-size: 100% 100%;
+    }
+    100%{
+        background-image: url('slide4.jpg');
+    
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        height: 250px;
+        width: 100%;
+    }
+}
+@media (min-width:577px) and (max-width: 800px){
+    .slide {
+        height: 250px;
+        max-width: 100%;
+    }
+}
+.container{
+    display: flex;
+    float: right;
+}
+
+
+.make-booking,
+.opening-time,
+.contact-adress {
+    flex: 1;
+    margin: 30px 10px;
+    font-size: 1.2em;
+    padding: 0px 50px ;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+.make-booking input{
+    width: 19rem;
+    height: 1.7rem;
+    padding-left: 10px;
+}
+#submit{
+    width: 80px;
+    font-family: 'Big Shoulders Text', cursive;
+}
+
+.opening-time p span,
+.contact-adress p span {
+    display: block;
+}
+@media (max-width: 768px) {
+    .nav li a{
+    font-size: 1rem;
+    }
+
+    .container {
+      flex-direction: column;
+    }
+
+    .make-booking, .opening-time, .contact-adress {
+      padding: 10px;
+    }
+  }
+
+
+@media (min-width:577px) and (max-width: 800px) {
+
+    .section-intro {
+        height: 500px;
+    }
+    .about-section p,
+    .about-section h3 {
+        font-size: 20px;
+        
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section-intro {
+        height: 300px;
+    }
+
+    .about-section {
+        padding: 30px;
+    }
+
+    .section-intro h1 {
+        font-size: 3em;
+    }
+
+    .about-section p,
+    .about-section h3 {
+        font-size: 12px;
+        
+    }
+
+}
+

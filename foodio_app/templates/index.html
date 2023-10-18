@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{% static 'index.css' %}">
+  <title>Foodio Website</title>
+</head>
+<body>
+  <nav>
+    <ul class="nav">
+      <li class="nav-item">
+        <a href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="#reservations">Reservation</a>
+      </li>
+      <li class="nav-item">
+        <a href="#menu">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a href="#shop">Shop</a>
+      </li>
+      <li class="nav-item">
+        <a href="/admin/">Admin</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="section-intro">
+    <header>
+      <h1>Foodio</h1>
+    </header>
+    <div class="link-to-book-div">
+      <a class="link-to-text" href="#reservations">Book a table</a>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <article>
+      <h3>why to choose our Restaurant</h3><br>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        A quos, voluptatum illum mollitia dolores libero placeat 
+        nesciunt quasi adipisci impedit!Lorem ipsum dolor sit, 
+        amet consectetur adipisicing elit. 
+        A quos, voluptatum illum mollitia dolores libero placeat 
+        nesciunt quasi adipisci impedit!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        A quos, voluptatum illum mollitia dolores libero placeat 
+        nesciunt quasi adipisci impedit!Lorem ipsum dolor sit.
+      </p>
+    </article>
+  </section>
+  <section> <div class="slide"></div></section>
+<section id="reservations">
+<footer>
+  <div class="container">
+    <div class="make-booking">
+      <h3>Make a booking</h3>
+      <p>Please leave your number we will call to make a reservation</p>
+      <form action="" method="post">
+        {% csrf_token %}
+      <input type="text" placeholder="Enter your name" name="name" required><br><br>
+      <input type="number" placeholder="Enter your phone number" name="mobile" required><br><br>
+      <input type="email" placeholder="Enter your email" name="email" required><br><br>
+      <input type="number" placeholder="Person count" name="person" required><br><br>
+      <input type="submit" value="Submit" id="submit"></form>
+    </div>
+      <div class="opening-time">
+        <h3>Opening times</h3>
+        <p>
+          <span>Monday To Friday : 8am - 10pm</span><br>
+          <span>Saturday : 8am - 1am</span><br>
+          <span>Sunday : 12pm - 12am</span>
+        </p>
+      </div>
+      <div class="contact-adress">
+        <h3>Contact</h3>
+        <p>
+          <span>+91 1234567890</span><br>
+          <span>Kolkata , 700040</span><br>
+          <span>contact@foodio.com</span><br>
+          <a href="" style="color: black;"><span>www.foodi0.com</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+</section>
+
+
+
+</body>
+</html>
