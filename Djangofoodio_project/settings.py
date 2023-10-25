@@ -89,7 +89,7 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 # EMAIL_USE_SSL = True  # Set to False when using TLS
 EMAIL_HOST_USER = 'sumandasdev@outlook.com'
-EMAIL_HOST_PASSWORD = 'Suman@2001'
+EMAIL_HOST_PASSWORD = ''
 # EMAIL_PORT = 587
 
 
